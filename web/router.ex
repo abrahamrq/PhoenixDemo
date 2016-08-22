@@ -20,6 +20,10 @@ defmodule PhoenixDemo.Router do
     
     # web/router.ex
     resources "/registrations", RegistrationController, only: [:new, :create]
+    
+    get    "/login",  SessionController, :new
+    post   "/login",  SessionController, :create
+    delete "/logout", SessionController, :delete
   end
 
   # Other scopes may use custom stacks.

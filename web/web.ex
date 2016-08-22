@@ -52,6 +52,7 @@ defmodule PhoenixDemo.Web do
       import PhoenixDemo.Router.Helpers
       import PhoenixDemo.ErrorHelpers
       import PhoenixDemo.Gettext
+      import PhoenixDemo.Session, only: [current_user: 1, logged_in?: 1]
     end
   end
 

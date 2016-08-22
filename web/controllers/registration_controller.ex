@@ -14,6 +14,7 @@ defmodule PhoenixDemo.RegistrationController do
     case PhoenixDemo.Registration.create(changeset, PhoenixDemo.Repo) do
       {:ok, changeset} ->
         conn
+        |> put_session(:current_user, changeset.id)
         |> put_flash(:info, "Your account was created")
         |> redirect(to: "/")
       {:error, changeset} ->
