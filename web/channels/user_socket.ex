@@ -2,6 +2,7 @@ defmodule PhoenixDemo.UserSocket do
   use Phoenix.Socket
 
   ## Channels
+  channel "lobby", PhoenixDemo.LobbyChannel
   # channel "room:*", PhoenixDemo.RoomChannel
 
   ## Transports
